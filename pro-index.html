@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Tarjeta de Perfil · Dev Card</title>
+
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Librería de confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Nuestro archivo CSS -->
+  <link rel="stylesheet" href="pro-styles.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO DE CLASE -->
+  <div class="clase-header">
+    <div class="clase-badge">✦ Desarrollo Web I · Ejercicio 03</div>
+    <h1 class="clase-titulo">Mi <span>Dev Card</span><br>interactiva</h1>
+  </div>
+
+  <!-- TARJETA PRINCIPAL -->
+  <div class="tarjeta">
+
+    <!-- CONTROLES: paleta + toggle tema -->
+    <div class="controles">
+      <div class="paleta">
+        <button class="color-btn activo" data-color="#1e40af" data-rgb="30,64,175"
+          style="background:#1e40af" title="Azul cobalto" onclick="cambiarColor(this)"></button>
+        <button class="color-btn" data-color="#7c3aed" data-rgb="124,58,237"
+          style="background:#7c3aed" title="Púrpura neón" onclick="cambiarColor(this)"></button>
+        <button class="color-btn" data-color="#06b6d4" data-rgb="6,182,212"
+          style="background:#06b6d4" title="Cian eléctrico" onclick="cambiarColor(this)"></button>
+        <button class="color-btn" data-color="#059669" data-rgb="5,150,105"
+          style="background:#059669" title="Verde matrix" onclick="cambiarColor(this)"></button>
+        <button class="color-btn" data-color="#facc15" data-rgb="250,204,21"
+          style="background:#facc15" title="Amarillo" onclick="cambiarColor(this)"></button>
+      </div>
+      <button class="theme-toggle" onclick="toggleTema(this)">
+        <span id="tema-icon">☀️</span>
+        <span id="tema-texto">Claro</span>
+      </button>
+    </div>
+
+    <!-- PERFIL: avatar + nombre -->
+    <div class="perfil-top">
+      <div class="avatar-wrap">
+        <!-- 🔧 RETO: cambia "Profe" por tu nombre -->
+        <img class="avatar" id="avatar-img"
+          src="https://api.dicebear.com/7.x/notionists/svg?seed=Jerson%20Martinez&backgroundColor=00f5a0"
+          alt="Avatar de Jerson Martinez"/>
+        <div class="online-dot"></div>
+      </div>
+      <div class="perfil-info">
+        <!-- 🔧 RETO: pon tu nombre y rol real -->
+        <div class="nombre">Jerson Martinez</div>
+        <div class="rol">Estudiante de Ingeniería de Sistemas de la Información</div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="skills">
+      <span class="tag">HTML5</span>
+      <span class="tag">CSS3</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Responsive</span>
+      <span class="tag">Git</span>
+    </div>
+
+    <!-- BIO -->
+    <!-- 🔧 RETO: cambia este texto por tu descripción real -->
+    <p class="bio">
+      Estudiante apasionado por el desarrollo de software y la tecnología.
+      Me enfoco en construir soluciones web modernas mientras aprendo buenas
+      prácticas de arquitectura, calidad y trabajo en equipo.
+    </p>
+
+    <!-- ESTADÍSTICAS -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-n">12</span>
+        <span class="stat-l">Proyectos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">3</span>
+        <span class="stat-l">Semanas</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">100</span>
+        <span class="stat-l">% Activo</span>
+      </div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="acciones">
+      <button class="btn btn-primario" onclick="lanzarConfetti(this)">¡Seguir! 🎉</button>
+      <button class="btn btn-secundario" onclick="compartir()">Compartir</button>
+    </div>
+
+  </div>
+
+  <!-- PANEL EDUCATIVO -->
+  <div class="edu-panel">
+    <div class="edu-titulo">🎯 Conceptos de esta clase</div>
+    <div class="conceptos">
+      <div class="concepto"><span class="concepto-icon">🎨</span><span><code>:root</code> Variables CSS</span></div>
+      <div class="concepto"><span class="concepto-icon">🌗</span><span><code>data-theme</code> Dark/Light</span></div>
+      <div class="concepto"><span class="concepto-icon">📐</span><span><code>display: grid</code></span></div>
+      <div class="concepto"><span class="concepto-icon">📱</span><span><code>@media</code> Responsive</span></div>
+      <div class="concepto"><span class="concepto-icon">✨</span><span><code>transition</code> Suavidad</span></div>
+      <div class="concepto"><span class="concepto-icon">⚡</span><span><code>onclick</code> Eventos JS</span></div>
+      <div class="concepto"><span class="concepto-icon">🎭</span><span><code>@keyframes</code> Animación</span></div>
+      <div class="concepto"><span class="concepto-icon">🔧</span><span><code>clamp()</code> Tipografía</span></div>
+    </div>
+  </div>
+
+  <!-- Nuestro archivo JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
